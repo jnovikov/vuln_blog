@@ -1,0 +1,25 @@
+
+
+{% extends "base.html" %}
+
+
+
+{% block title %}Главная | Крутой сервис{% endblock %}
+
+
+
+{% block content %}
+    <div class="container">
+            <br><br>
+
+            <div class="jumbotron">
+                <p class="lead" >{{ name | safe }}</p>
+            </div>
+        <br><br>
+            <div class="jumbotron">
+             <p class="text-center">{{ text | safe}}</p>
+            </div>
+        <!-- Example row of columns -->
+
+    </div> <!-- /container -->
+{% endblock %}

@@ -1,0 +1,37 @@
+
+
+{% extends "base.html" %}
+
+
+
+{% block title %}Написать{% endblock %}
+
+
+
+{% block content %}
+    <div class="container">
+    <div class="jumbotron">
+
+            <p class="lead">Напиши свой пост здесь!</p>
+
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-lg-4">
+            </div>
+        </div>
+
+    </div> <!-- /container -->
+
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="usr">Название</label>
+            <input type="text" name="name" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="comment">Текст</label>
+            <textarea class="form-control" name="text" rows="7" id="text"></textarea>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Написать!</button>
+    </form>
+    </div>
+{% endblock %}

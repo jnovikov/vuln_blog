@@ -1,0 +1,46 @@
+
+
+{% extends "base.html" %}
+
+
+
+{% block title %}Welcome to our VoiceMail service!{% endblock %}
+
+
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+
+            <p class="lead">Здесь можно посмотреть ваши посты!</p>
+
+
+        <!-- Example row of columns -->
+        </div>
+        {% if posts %}
+        <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Название</th>
+                        <th>Ссылка</th>
+                        <th>Время</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                        <tr>
+                            <td>{{ post.id }}</td>
+                            <td>{{ post.name }}</td>
+                            <td><a href="/post-{{ post.id }}">Клик</a></td>
+                            <td>{{ post.time }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+        </table>
+        {%  else %}
+            <p>Вы еще не написали ничего :( </p>
+        {% endif %}
+
+    </div>
+{% endblock %}
